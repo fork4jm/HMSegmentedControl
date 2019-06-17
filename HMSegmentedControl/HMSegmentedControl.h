@@ -247,6 +247,9 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
 
 @property (nonatomic, readwrite) UIEdgeInsets enlargeEdgeInset;
 
+//修改indicatorBox样式
+@property (nonatomic, strong, readonly) CALayer *selectionIndicatorBoxLayer;
+
 /**
  Default is YES. Set to NO to disable animation during user selection.
  */
