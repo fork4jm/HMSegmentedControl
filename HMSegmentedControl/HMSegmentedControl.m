@@ -595,7 +595,11 @@
     
     if (self.type == HMSegmentedControlTypeText) {
         CGFloat stringWidth = [self measureTitleAtIndex:self.selectedSegmentIndex].width;
-        sectionWidth = stringWidth;
+        if (self.indicatorWidth != 0) {
+            sectionWidth = self.indicatorWidth;//stringWidth;
+        } else {
+            sectionWidth = stringWidth;
+        }
     } else if (self.type == HMSegmentedControlTypeImages) {
         UIImage *sectionImage = [self.sectionImages objectAtIndex:self.selectedSegmentIndex];
         CGFloat imageWidth = sectionImage.size.width;
