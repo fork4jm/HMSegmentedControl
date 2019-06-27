@@ -257,6 +257,9 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
 
 @property (nonatomic, assign) NSInteger indicatorWidth;
 
+//修改indicatorStrip样式
+@property (nonatomic, strong, readonly) CALayer *selectionIndicatorStripLayer;
+
 - (id)initWithSectionTitles:(NSArray<NSString *> *)sectiontitles;
 - (id)initWithSectionImages:(NSArray<UIImage *> *)sectionImages sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages;
 - (instancetype)initWithSectionImages:(NSArray<UIImage *> *)sectionImages sectionSelectedImages:(NSArray<UIImage *> *)sectionSelectedImages titlesForSections:(NSArray<NSString *> *)sectiontitles;
